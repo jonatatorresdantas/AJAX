@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto com Ajax</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Projeto com Ajax</h1>
+        
+        <div class="controles">
+            <button onclick="carregarUsuarios()">Carregar Usuários</button>
+            <button onclick="carregarPosts()">Carregar Posts</button>
+            <button onclick="carregarTodos()">Carregar Tarefas</button>
+            <button onclick="limparDados()">Limpar</button>
+        </div>
+
+        <div id="erro-mensagem"></div>
+        <div id="sucesso-mensagem"></div>
+
+        <div id="loading">
+            <div class="spinner"></div>
+            <p>Carregando dados...</p>
+        </div>
+
+        <div class="stats" id="stats" style="display: none;">
+            <div class="stat-item">
+                <div class="stat-number" id="total-items">0</div>
+                <div class="stat-label">Total de Itens</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" id="tempo-carregamento">0s</div>
+                <div class="stat-label">Tempo de Carregamento</div>
+            </div>
+        </div>
+
+        <div id="dados-container"></div>
+    </div>
+
+    <script src="js/fetch-api.js"></script>
+</body>
+</html>
